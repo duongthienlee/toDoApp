@@ -48,7 +48,7 @@ Input[type=submit]{
 
 /*Table styling */
 table, th, td {
-    border: 1px groove gray ;
+border-bottom: 1px solid #ddd;
 
 }
 table{
