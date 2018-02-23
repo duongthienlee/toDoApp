@@ -3,15 +3,3 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-#divToDo {
-  top: 10px;
-  left:1%;
-  height:100px;
-  width:98%;
-  border : 1px solid;
-  position:relative;
-}
-#toDoList{
-    width: 50%;
-    margin:auto;
-}
