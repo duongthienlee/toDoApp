@@ -1,9 +1,6 @@
 import React, {Component} from "react"
 import "./App.css"
 class TodoTable extends Component {
-  constructor(props) {
-    super(props)
-  }
   removeItem(item, index) {
     this.props.removeToDo(item, index)
   }

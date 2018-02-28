@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import logo from "./logo.svg"
 import "./App.css"
 import TodoTable from "./TodoTable"
 
@@ -37,7 +36,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2 className="App-title">Simple Todolist</h2>
         </header>
 
@@ -50,6 +48,7 @@ class App extends Component {
               name="description"
               onChange={this.inputChanged}
               value={this.state.description}
+              placeholder="Description"
             />
             <label>Date:</label>
             <input
@@ -57,6 +56,7 @@ class App extends Component {
               name="date"
               onChange={this.inputChanged}
               value={this.state.date}
+              placeholder="Date"
             />
             <input type="submit" value="Add" />
           </form>
