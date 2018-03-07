@@ -1,42 +1,59 @@
-import React, {Component} from "react"
+import React, {Component} from 'react'
 import "./App.css"
+import RaisedButton from 'material-ui/RaisedButton'
+import {
+    Table,
+    TableBody,
+    TableHeader,
+    TableHeaderColumn,
+    TableRow,
+    TableRowColumn
+} from 'material-ui/Table'
+
 class TodoTable extends Component {
-  removeItem(item, index) {
-    this.props.removeToDo(item, index)
-  }
-  render() {
-    return (
-      <div className="App">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Description</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.todos.map((item, index) => (
-              <tr key={index}>
-                <td> {item.date}</td>
-                <td> {item.description}</td>
-                <td>
-                  <button
-                    onClick={() => {
-                      this.removeItem(item, index)
-                    }}
-                    key={index}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    )
-  }
+    constructor(props) {
+        super(props);
+    }
+
+    removeItem(item, index) {
+        this.props.removeToDo(item, index)
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <Table selectable={false}>
+                    <TableHeader
+                        displaySelectAll={false}>
+                        <TableHeaderColumn>
+                            Date
+                        </TableHeaderColumn>
+                        <TableHeaderColumn>
+                            Description
+                        </TableHeaderColumn>
+                    </TableHeader>
+                    <TableBody displayRowCheckbox={false}>
+                        {this.props.todos.map((item, index) =>
+                            <TableRow key={index}>
+                                <TableRowColumn>{item.date}</TableRowColumn>
+                                <TableRowColumn>{item.description}</TableRowColumn>
+                                <TableRowColumn>
+                                    <RaisedButton
+                                        onClick={() => {
+                                            this.removeItem(item, index)
+                                        }}
+                                        key={index}
+                                        label="Delete"
+                                    >
+
+                                    </RaisedButton>
+                                </TableRowColumn>
+                            </TableRow>)}
+                    </TableBody>
+                </Table>
+            </div>
+        )
+    }
 }
 
 export default TodoTable

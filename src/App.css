@@ -22,48 +22,10 @@
   font-size: large;
 }
 
-.inputTodo{
-  border: 1px groove gray;
-  left: 1%;
-  margin:1% 1% 2% 1%;
-  padding:2% 0 2% 0;
-  position: relative;
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
-.inputTodo > :first-child {
-  color:red;
-  margin-top:-3%;
-  padding:0 1% 0 1%;
-  left:15px;
-  position: absolute;
-  background:white;
-
-}
-Label{
-    padding: 0 15px 0 15px;
-}
-/*Button add*/
-Input[type=submit]{
-    margin:0 0 0 1%;
-}
-
-/*Table styling */
-table, th, td {
-border-bottom: 1px solid #ddd;
-
-}
-table{
-  border-collapse: collapse;
-  width:50%;
-  position: relative;
-  left:25%;
-
-}
-table th{
-  text-align: center;
-  color: navy;
-  height:50px;
-}
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
