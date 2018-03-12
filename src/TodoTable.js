@@ -11,13 +11,6 @@ import {
 } from 'material-ui/Table'
 
 class TodoTable extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    removeItem(item, index) {
-        this.props.removeToDo(item, index)
-    }
 
     render() {
         return (
@@ -40,9 +33,9 @@ class TodoTable extends Component {
                                 <TableRowColumn>
                                     <RaisedButton
                                         onClick={() => {
-                                            this.removeItem(item, index)
+                                            this.props.removeToDo(item, index)
                                         }}
-                                        key={index}
+                                        id={index}
                                         label="Delete"
                                     >
 
